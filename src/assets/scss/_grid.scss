@@ -1,0 +1,155 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Basic
+- Flexbox
+- Susy
+- Masonry
+*/
+
+
+
+/* Basic
+------------------------------------ */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 1000px */
+@media (min-width: 1000px) {
+  .container {
+    width: 80%; }
+}
+
+/* Flexbox
+------------------------------------
+section, footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+article {
+  flex: 1;
+}
+*/
+
+/* Susy
+------------------------------------
+
+$susy: (
+  //container: 960px,
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  //gutter-position: inside,
+  //debug: (image: show-columns)
+
+);
+
+@include border-box-sizing;
+
+main,article {
+  @include container();
+  //width: container(80%);
+    }
+main.full,article.full {
+  width: container(97%);
+    }
+*/
+
+
+/* Masonry
+------------------------------------*/
+
+// MobilFirst
+
+  .grid-item--w1, .grid-item--w2, .grid-item-2cols { 
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+
+main {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 1400 et + */
+@media only screen and (min-width: 1400px) {
+  main {
+    //width: container(1285px); // with Susy
+    width: 1285px;
+  }
+  .grid-item--w1 { 
+    width: 310px;
+  }
+  .grid-item-2col { 
+    width: 635px;
+  }
+
+  .grid-item--w2 { width: 635px; }
+
+
+
+
+}
+
+/* 960 et + */
+@media only screen and (min-width: 960px) and (max-width: 1399px) {
+  main {
+    //width: container(960px); // with Susy
+    width: 960px;
+  }
+  .grid-item--w1 { 
+    width: 310px;
+  }
+  .grid-item-2col { 
+    width: 472px;
+  }
+
+  .grid-item--w2 { width: 635px; }
+
+}
+/* 956-768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+  main {
+    //width: container(768px); // with Susy
+    width: 768px;
+  }
+
+
+  .grid-item--w1, .grid-item--w2, .grid-item-2col { 
+    width: (376px);
+  }
+}
+
+/* 767-480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  main {
+    //width: container(90%); // with Susy
+    width: 90%;
+  }
+
+
+}
+
+/* 479px */
+@media only screen and (max-width: 479px) {
+
+
+}
